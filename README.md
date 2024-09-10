@@ -26,46 +26,46 @@ Ensure that the following software is installed:
 - Apache Airflow
 - PostgreSQL
 
-#1. Clone the Repository
+# 1. Clone the Repository
 git clone https://github.com/yourusername/NewYorkCity-taxi-trip-etl.git
 cd NYC-Taxi-Trip
 
-#2. Set Up Docker Compose
+# 2. Set Up Docker Compose
   1. Create a .env file (optional) for environment variables, or modify directly in the docker-compose.yml.
   2. Start all services:
     docker-compose up
 This will launch the Airflow webserver, scheduler, PostgreSQL, and Redis services.
 
-#3. Load Dataset into PostgreSQL
+# 3. Load Dataset into PostgreSQL
 - Ensure the dataset nyc_taxi_trip_duration.csv is in the project root.
 - Run the data loading script:
   python load_dataset.py
 This will clean the dataset and load it into the nyc_taxi_trips table in PostgreSQL.
 
-#4. Run the Airflow DAG
+# 4. Run the Airflow DAG
 - Open Airflow by navigating to http://localhost:8080/.
 - Trigger the nyc_taxi_etl_dashboard_dag to run the ETL process.
 - Monitor task status and logs in the Airflow UI.
 
-#6. Run the Dashboard
+# 5. Run the Dashboard
 After the ETL pipeline finishes, run the Dash dashboard:
 
 python dashboard.py
 Visit the dashboard at http://localhost:8050/ or http://127.0.0.1:8050/ to see the visualized data.
 
-#Airflow DAG
+# Airflow DAG
 The DAG consists of three tasks:
 
-1.Extract Task: Extracts the raw data from PostgreSQL.
-2.Transform Task: Cleans the data, calculates trip distances, and creates a new dataset.
-3.Load Task: Loads the cleaned data into a new table in PostgreSQL for visualization.
+1 .Extract Task: Extracts the raw data from PostgreSQL.
+2. Transform Task: Cleans the data, calculates trip distances, and creates a new dataset.
+3. Load Task: Loads the cleaned data into a new table in PostgreSQL for visualization.
 
-#Dashboard
+# Dashboard
 The dashboard is built using Dash and Plotly. It displays the following insights:
 - Trip Duration: Line chart of trip durations over time.
 - Passenger Count: Bar chart showing the distribution of passenger counts.
 
-#Technologies Used
+# Technologies Used
 - Apache Airflow: Task scheduling and orchestration.
 - PostgreSQL: Relational database for storing trip data.
 - Redis: Message broker for handling Airflow tasks.
@@ -73,13 +73,13 @@ The dashboard is built using Dash and Plotly. It displays the following insights
 - Python Dash: Framework for building the interactive dashboard.
 - Plotly: Visualization library for creating interactive charts.
 
-#Running Tests
+# Running Tests
 Unit tests for the ETL scripts can be added to ensure data consistency after extraction and transformation.
 
-#Future Enhancements
+# Future Enhancements
 - Include more transformations, such as fare calculations.
 - Add error handling and logging to the ETL process.
 - Integrate with other data sources for more insights.
 
-#License
+# License
 This project is licensed under the MIT License.
