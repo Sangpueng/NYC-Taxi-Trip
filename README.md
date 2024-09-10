@@ -32,11 +32,13 @@ Ensure that the following software is installed:
 # 2. Set Up Docker Compose
   1. Create a .env file (optional) for environment variables, or modify directly in the docker-compose.yml.
   2. Start all services: ![image](https://github.com/user-attachments/assets/09e1b0e6-2393-4c22-ba8f-2df307fa3fff)
+
 This will launch the Airflow webserver, scheduler, PostgreSQL, and Redis services.
 
 # 3. Load Dataset into PostgreSQL
 - Ensure the dataset nyc_taxi_trip_duration.csv is in the project root.
 - Run the data loading script: ![image](https://github.com/user-attachments/assets/ec8225e7-b6ee-42a9-9818-53c69651511c)
+
 This will clean the dataset and load it into the nyc_taxi_trips table in PostgreSQL.
 
 # 4. Run the Airflow DAG
@@ -46,12 +48,13 @@ This will clean the dataset and load it into the nyc_taxi_trips table in Postgre
 
 # 5. Run the Dashboard
 After the ETL pipeline finishes, run the Dash dashboard: ![image](https://github.com/user-attachments/assets/e6613c04-a4db-4dbf-be00-2dfbc8df2228)
+
 Visit the dashboard at http://localhost:8050/ or http://127.0.0.1:8050/ to see the visualized data.
 
 # Airflow DAG
 The DAG consists of three tasks:
 
-1 .Extract Task: Extracts the raw data from PostgreSQL.
+1. Extract Task: Extracts the raw data from PostgreSQL.
 2. Transform Task: Cleans the data, calculates trip distances, and creates a new dataset.
 3. Load Task: Loads the cleaned data into a new table in PostgreSQL for visualization.
 
@@ -59,6 +62,7 @@ The DAG consists of three tasks:
 The dashboard is built using Dash and Plotly. It displays the following insights:
 - Trip Duration: Line chart of trip durations over time.
 - Passenger Count: Bar chart showing the distribution of passenger counts.
+
 ![image](https://github.com/user-attachments/assets/4b5fac73-bc20-4b67-b036-cd60ee710167)
 
 # Technologies Used
