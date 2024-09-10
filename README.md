@@ -81,5 +81,3 @@ Unit tests for the ETL scripts can be added to ensure data consistency after ext
 - Add error handling and logging to the ETL process.
 - Integrate with other data sources for more insights.
 
-# License
-This project is licensed under the MIT License.
