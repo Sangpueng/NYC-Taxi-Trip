@@ -1,4 +1,4 @@
-# NYC Taxi Data ETL and Dashboard with Apache Airflow
+# NewYorkCity-Taxi-Trip: ETL and Dashboard with Apache Airflow
 
 # Overview
 This project demonstrates the use of Apache Airflow to build an ETL (Extract, Transform, Load) pipeline for the NYC Taxi Dataset. The pipeline automates data ingestion, transformation, and storage in a PostgreSQL database, and the transformed data is visualized using Python Dash for real-time insights.
@@ -27,19 +27,16 @@ Ensure that the following software is installed:
 - PostgreSQL
 
 # 1. Clone the Repository
-git clone https://github.com/yourusername/NewYorkCity-taxi-trip-etl.git
-cd NYC-Taxi-Trip
+![image](https://github.com/user-attachments/assets/989c40e6-cfbc-4e03-9d97-6423019a2780)
 
 # 2. Set Up Docker Compose
   1. Create a .env file (optional) for environment variables, or modify directly in the docker-compose.yml.
-  2. Start all services:
-    docker-compose up
+  2. Start all services: ![image](https://github.com/user-attachments/assets/76ac90ab-0ea5-4aba-becc-a013a736a532)
 This will launch the Airflow webserver, scheduler, PostgreSQL, and Redis services.
 
 # 3. Load Dataset into PostgreSQL
 - Ensure the dataset nyc_taxi_trip_duration.csv is in the project root.
-- Run the data loading script:
-  python load_dataset.py
+- Run the data loading script: ![image](https://github.com/user-attachments/assets/ffc0f1b4-6a35-4ac1-a3b3-81453065dab7)
 This will clean the dataset and load it into the nyc_taxi_trips table in PostgreSQL.
 
 # 4. Run the Airflow DAG
@@ -48,9 +45,7 @@ This will clean the dataset and load it into the nyc_taxi_trips table in Postgre
 - Monitor task status and logs in the Airflow UI.
 
 # 5. Run the Dashboard
-After the ETL pipeline finishes, run the Dash dashboard:
-
-python dashboard.py
+After the ETL pipeline finishes, run the Dash dashboard: ![image](https://github.com/user-attachments/assets/01fe3dce-5072-4a77-a554-efd9d6d90c75)
 Visit the dashboard at http://localhost:8050/ or http://127.0.0.1:8050/ to see the visualized data.
 
 # Airflow DAG
