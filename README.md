@@ -16,7 +16,7 @@ This project demonstrates the use of Apache Airflow to build an ETL (Extract, Tr
 4. Dashboard: The dashboard provides insights on key metrics like trip duration, number of passengers, etc., with interactive visualizations built using Dash and Plotly.
 
 # Project Structure
-![image](https://github.com/user-attachments/assets/9a6fe0a3-5972-405b-97f0-e35b14c1a34b)
+![image](https://github.com/user-attachments/assets/d61da559-8795-4fcd-8642-42bb124f1e9f)
 
 # Getting Started
 # Prerequisites
@@ -27,16 +27,16 @@ Ensure that the following software is installed:
 - PostgreSQL
 
 # 1. Clone the Repository
-![image](https://github.com/user-attachments/assets/989c40e6-cfbc-4e03-9d97-6423019a2780)
+![image](https://github.com/user-attachments/assets/10ccf802-0803-4626-8e12-0f6870ee3a28)
 
 # 2. Set Up Docker Compose
   1. Create a .env file (optional) for environment variables, or modify directly in the docker-compose.yml.
-  2. Start all services: ![image](https://github.com/user-attachments/assets/76ac90ab-0ea5-4aba-becc-a013a736a532)
+  2. Start all services: ![image](https://github.com/user-attachments/assets/09e1b0e6-2393-4c22-ba8f-2df307fa3fff)
 This will launch the Airflow webserver, scheduler, PostgreSQL, and Redis services.
 
 # 3. Load Dataset into PostgreSQL
 - Ensure the dataset nyc_taxi_trip_duration.csv is in the project root.
-- Run the data loading script: ![image](https://github.com/user-attachments/assets/ffc0f1b4-6a35-4ac1-a3b3-81453065dab7)
+- Run the data loading script: ![image](https://github.com/user-attachments/assets/ec8225e7-b6ee-42a9-9818-53c69651511c)
 This will clean the dataset and load it into the nyc_taxi_trips table in PostgreSQL.
 
 # 4. Run the Airflow DAG
@@ -45,7 +45,7 @@ This will clean the dataset and load it into the nyc_taxi_trips table in Postgre
 - Monitor task status and logs in the Airflow UI.
 
 # 5. Run the Dashboard
-After the ETL pipeline finishes, run the Dash dashboard: ![image](https://github.com/user-attachments/assets/01fe3dce-5072-4a77-a554-efd9d6d90c75)
+After the ETL pipeline finishes, run the Dash dashboard: ![image](https://github.com/user-attachments/assets/e6613c04-a4db-4dbf-be00-2dfbc8df2228)
 Visit the dashboard at http://localhost:8050/ or http://127.0.0.1:8050/ to see the visualized data.
 
 # Airflow DAG
