@@ -59,6 +59,7 @@ The DAG consists of three tasks:
 The dashboard is built using Dash and Plotly. It displays the following insights:
 - Trip Duration: Line chart of trip durations over time.
 - Passenger Count: Bar chart showing the distribution of passenger counts.
+![image](https://github.com/user-attachments/assets/4b5fac73-bc20-4b67-b036-cd60ee710167)
 
 # Technologies Used
 - Apache Airflow: Task scheduling and orchestration.
